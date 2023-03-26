@@ -26,10 +26,10 @@ class HAPAccessoryLightbulbDimmer extends HAPAccessoryLightbulbSwitch
         //This should fix the problem that Apple sends on before dimming
         if ($value && $this->readCharacteristicOn())
         {
-            //return;
+            return 1;
         }
       
-        if ($value)
+        else if ($value)
         {
             
             self::dimDevice($this->data['VariableID'], 255);
