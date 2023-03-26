@@ -17,7 +17,7 @@ class HAPAccessoryLightbulbDimmer extends HAPAccessoryLightbulbSwitch
 
     public function readCharacteristicOn()
     {
-        return self::getDimValue($this->data['VariableID'];
+        return self::getDimValue($this->data['VariableID']);
     }
 
     public function writeCharacteristicOn($value)
