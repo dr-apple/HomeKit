@@ -29,9 +29,9 @@ class HAPAccessoryLightbulbDimmer extends HAPAccessoryLightbulbSwitch
         }
 
         if ($value) {
-            self::dimDevice($this->data['VariableID'], $value);
+            //self::dimDevice($this->data['VariableID'], $value);
         } else {
-            self::dimDevice($this->data['VariableID'], 0);
+            //self::dimDevice($this->data['VariableID'], 0);
         }
     }
 
