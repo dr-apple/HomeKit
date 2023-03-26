@@ -27,10 +27,11 @@ class HAPAccessoryLightbulbDimmer extends HAPAccessoryLightbulbSwitch
         if ($value && $this->readCharacteristicOn()) {
             return;
         }
-        print "Homekit: $value";
+       
 
         if ($value) {
-            //self::dimDevice($this->data['VariableID'], $value);
+            $value2=$this->readCharacteristicBrightness();
+            self::dimDevice($this->data['VariableID'], $value2);
         } else {
             self::dimDevice($this->data['VariableID'], 0);
         }
